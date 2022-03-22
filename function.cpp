@@ -1,3 +1,5 @@
-void nothingness() {
-  std::cout << "hey boooooogie";
+#include "function.h"
+
+std::string nothingness() {
+  return "some string";
 }

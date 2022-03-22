@@ -1,8 +1,8 @@
 #include <iostream>
-#include "function.cpp"
+#include "function.h"
 
 int main() {
-  std::cout << "hey boogie\n";
-  nothingness();
+  std::cout << "hey boogie" << std::endl;
+  std::cout << nothingness() << std::endl;
   return 0;
 }
