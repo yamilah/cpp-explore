@@ -7,6 +7,12 @@ int main() {
     BeginDrawing();
     ClearBackground(RAYWHITE);
 
+    for (int column = 0; column < 8; ++column) {
+      for (int brick = 0; brick < 2; ++brick) {
+        DrawRectangle(column * 55 + brick * 15, brick * 35, 50, 30, MAROON);
+      }
+    }
+
     EndDrawing();
   }
 }
