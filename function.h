@@ -10,5 +10,5 @@ public:
   void SetAge(int age);
   void SetName(std::string name);
   std::string GetName();
-  bool IsCompatible(Person p);
+  bool IsCompatible(Person* p);
 };

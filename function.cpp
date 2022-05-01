@@ -22,8 +22,8 @@ std::string Person::GetName() {
   return name;
 }
 
-bool Person::IsCompatible(Person other) {
-  if (other.age - age > 5 || other.age - age < -5) {
+bool Person::IsCompatible(Person* other) {
+  if (other->age - age > 5 || other->age - age < -5) {
     return false;
   } else {
     return true;
