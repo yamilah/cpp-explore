@@ -3,15 +3,29 @@
 
 int main() {
   InitWindow(600, 600, "ligma");
+  auto ye = LoadTexture("images/ye.png");
+  auto stick = LoadImage("images/fishstick_5.png");
+  const float scaleNumber = 0.4;
+  ImageResize(&stick, stick.width * scaleNumber, stick.height * scaleNumber);
+  auto stickTexture = LoadTextureFromImage(stick);
+
+  int x = 500;
+  int y = 500;
+  int velocity = -1;
+
   while(!WindowShouldClose()) {
     BeginDrawing();
     ClearBackground(RAYWHITE);
 
-    for (int column = 0; column < 8; ++column) {
-      for (int brick = 0; brick < 2; ++brick) {
-        DrawRectangle(column * 55 + brick * 15, brick * 35, 50, 30, MAROON);
-      }
+    if (x < 180 || x > 600) {
+      velocity = velocity * -1;
     }
+
+    x = x + velocity;
+    y = y + velocity;
+
+    DrawTexture(ye, 0, 0, RAYWHITE);
+    DrawTexture(stickTexture, x, y, RAYWHITE);
 
     EndDrawing();
   }

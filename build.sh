@@ -5,5 +5,4 @@ clang++ *.cpp \
 -framework Cocoa \
 -framework GLUT \
 -framework OpenGL \
--o ligma.exe.elon.420.exe \
-&& ./ligma.exe.elon.420.exe
+-o ligma.exe.elon.420.exe
